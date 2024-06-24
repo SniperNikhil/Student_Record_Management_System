@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*::selection {
+    background-color: rgb(50, 46, 46);
+}
+
+/* body{
+    background-color: red;
+} */
+
+.navbar {
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgb(6, 6, 50);
+    height: 12vh;
+    width: 100vw;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+}
+
+.logo,
+.navhead,
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo {
+    position: relative;
+    padding-right: 3vw;
+}
+
+.navbar .logo label {
+    position: absolute;
+    font-size: 5vw;
+}
+
+.navbar .navhead label {
+    font-size: 2.3vw;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(206, 226, 87);
+}
+
+.navbar .time label {
+    font-size: 2.3vw;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(229, 224, 223);
+    padding-left: 5vw;
+}
+
+/* Main Body Code */
+
+.mainbody {
+    width: 100vw;
+    height: 88vh;
+    background-color: rgb(4, 4, 34);
+
+    /* background-color: rgb(26, 25, 25); */
+    border-top: 0.1px solid #fff;
+
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+
+    .managestudent,
+    .studentsrecords {
+        /* background-color: rgb(8, 8, 24); */
+        background-color: rgb(4, 4, 34);
+        margin: 1vw;
+        border-radius: 4vw;
+    }
+
+    .managestudent:hover,
+    .studentsrecords:hover {
+        background-color: rgb(10, 10, 34);
+        /* background-color: rgb(4, 4, 34);     */
+        background-color: rgb(10, 10, 38);
+    }
+
+    .managestudent .mtitle {
+        height: 8vh;
+        width: 90%;
+        color: #af4c0f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.9vw;
+        letter-spacing: 2px;
+        margin: auto;
+        border-bottom: 1px solid #fff;
+    }
+
+    .managestudent .holdstudentfields {
+        width: 90%;
+        /* height: 70vh; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9vw;
+        color: #fff;
+        margin: auto;
+        margin-top: 2vh;
+    }
+
+    .managestudent .holdstudentfields .studentfields {
+        /* height: 6vh; */
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 3px;
+            margin-left: 5px;
+            color: yellow;
+            letter-spacing: 2px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 16vw;
+            height: 6vh;
+            font-size: 1.6vw;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+            background-color: black;
+            color: #fff;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            /* Inverts the color of the icon */
+        }
+
+        textarea {
+            width: 34vw;
+            height: 10vh;
+        }
+
+        button {
+            width: 17vw;
+            height: 6vh;
+            margin: auto;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            letter-spacing: 2px;
+        }
+    }
+
+    .managestudent .holdstudentfields .email {
+        grid-area: 4/1/5/3;
+
+        input,
+        select {
+            width: 28vw;
+        }
+    }
+
+    .managestudent .holdstudentfields .address {
+        grid-area: 5/1/6/3;
+
+    }
+}
+
+.add {
+    background-color: rgb(53, 7, 55);
+}
+
+.clear {
+    background-color: chocolate;
+}
+
+.update {
+    background-color: red;
+}
+
+.delete {
+    background-color: rgb(0, 94, 255);
+}
+
+.recordstitle {
+    width: 100%;
+    height: 8vh;
+    /* background-color: #af4c0f; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 20px;
+    border: 1px solid #fff;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        label {
+            letter-spacing: 2px;
+        }
+
+        input,
+        select {
+            width: 13vw;
+            height: 5vh;
+            font-size: 1.6vw;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+            background-color: black;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        button {
+            width: 13vw;
+            height: 6vh;
+            margin: auto;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+            cursor: pointer;
+            letter-spacing: 2px;
+            background-color: skyblue;
+        }
+    }
+
+    .searchtitle {
+        font-size: 2vw;
+        color: #e05813;
+    }
+
+}
+
+
+.recordstable {
+    margin-top: 2vh;
+    width: 56vw;
+    height: 73vh;
+    /* overflow: auto; */
+    padding: 10px;
+    border-top: 2px solid #fff;
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+}
+.littleadjust{
+    height: 71vh;
+    overflow: auto;
+}
+
+.recordstable table,
+.recordstable td,
+.recordstable th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.recordstable table {
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* overflow: hidden; */
+    overflow: auto;
+}
+
+.recordstable th {
+    padding: 15px;
+    white-space: nowrap;
+    background-color: rgb(170, 16, 152);
+    background-color: #080d3b;
+    position: sticky;
+    top: 0px;
+    letter-spacing: 2px;
+    color: yellow;
+}
+
+
+.recordstable td{
+    padding: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.recordstable thead th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.recordstable thead th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.recordstable tr.highlight {
+    background-color: #1c7f93;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <label for="">&#x1F393;</label>
+        </div>
+        <div class="navhead">
+            <label for="">Student Record Managemnt System</label>
+        </div>
+        <div class="time">
+            <label for="">10:20:30</label>
+        </div>
+    </div>
+    <div class="mainbody">
+        <div class="managestudent">
+            <div class="mtitle">
+                <label for="">Student Enrollment</label>
+            </div>
+            <div class="holdstudentfields">
+                <div class="studentfields">
+                    <label for="">Student ID</label>
+                    <input type="text" id="studentid">
+                </div>
+                <div class="studentfields">
+                    <label for="">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="studentfields">
+                    <label for="">D.O.B</label>
+                    <input type="date" id="dob">
+                </div>
+                <div class="studentfields">
+                    <label for="">Gender</label>
+                    <select id="gender" name="options">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="studentfields">
+                    <label for="">Phone No.</label>
+                    <input type="text" id="phone">
+                </div>
+                <div class="studentfields">
+                    <label for="">Age</label>
+                    <input type="text" id="age">
+                </div>
+                <div class="studentfields email">
+                    <label for="">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="studentfields address">
+                    <label for="">Address</label>
+                    <textarea rows="5" cols="10" id="address"></textarea>
+                </div>
+                <div class="studentfields">
+                    <button type="button" class="add" id="add">ADD</button>
+                </div>
+                <div class="studentfields">
+                    <button type="button" class="clear" id="clear">CLEAR</button>
+                </div>
+                <div class="studentfields">
+                    <button type="button" class="update" id="update">UPDATE</button>
+                </div>
+                <div class="studentfields">
+                    <button type="button" class="delete" id="delete">DELETE</button>
+                </div>
+            </div>
+        </div>
+        <div class="studentsrecords">
+            <div class="recordstitle">
+                <div class="searchtitle">
+                    <label for="">Search By</label>
+                </div>
+                <div class="searchdrop">
+                    <select id="searchoption" name="options">
+                        <option value="Select">Select</option>
+                        <option value="studentid">Student Id</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                <div class="searchinput">
+                    <input type="text" id="searchinput">
+                </div>
+                <div class="searchbtn">
+                    <button type="button" id="search">SEARCH</button>
+                </div>
+            </div>
+            <div class="recordstable">
+                <div class="littleadjust">
+                    <table>
+                        <thead>
+                            <th>Student Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>D.O.B</th>
+                            <th>Gender</th>
+                            <th>Phone No.</th>
+                            <th>Age</th>
+                            <th>Address</th>
+                        </thead>
+                        <tbody id="studentsTableBody"> 
+                            {{#each allstudents}} 
+                            <tr>
+                                <td>{{studentid}}</td>
+                                <td>{{name}}</td>
+                                <td>{{email}}</td>
+                                <td>{{dob}}</td>
+                                <td>{{gender}}</td>
+                                <td>{{phone}}</td>
+                                <td>{{age}}</td>
+                                <td>{{address}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
