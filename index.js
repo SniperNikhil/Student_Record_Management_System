@@ -121,7 +121,7 @@ io.on('connection', (socket) => {
                     { email: data.email },
                     {
                         $set: {
-                            name: data.sname,
+                            name: data.name,
                             dob: data.dob,
                             gender: data.gender,
                             phone: data.phone,
